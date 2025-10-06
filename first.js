@@ -41,12 +41,46 @@ const paragraph = document.getElementById("myParagraph");
     const button = document.getElementById("toggleBtn");
      button.addEventListener("click", function() {
       if (paragraph.style.display === "none") {
-        // If hidden, show it
+    
         paragraph.style.display = "block";
-        button.textContent = "Hide"; // update button text
-      } else {
-        // If visible, hide it
+        button.textContent = "Hide"; 
+        
         paragraph.style.display = "none";
-        button.textContent = "Show"; // update button text
+        button.textContent = "Show";
+      }
+       else {
+
+    paragraph.style.display = "none";
+    button.textContent = "Show";
+  }
+    });
+
+
+     const box = document.getElementById("box");
+     box.addEventListener("mouseover", function() {
+      box.style.backgroundColor = "lightblue";
+    });
+
+     box.addEventListener("mouseout", function() {
+      box.style.backgroundColor = "lightgray";
+    });
+
+// from valadition 
+
+      const form = document.getElementById("emailForm");
+    const emailInput = document.getElementById("email");
+    const warning = document.getElementById("warning");
+
+    form.addEventListener("submit", function(event) {
+
+      event.preventDefault();
+
+    
+      if (emailInput.value.trim() === "") {
+        warning.innerText = "Please enter your email!";
+      } else {
+        warning.innerText = ""; 
+       
+        alert("Form submitted successfully!");
       }
     });
