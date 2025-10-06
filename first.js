@@ -55,14 +55,16 @@ const paragraph = document.getElementById("myParagraph");
   }
     });
 
+    // Hover point is the color change
+
 
      const box = document.getElementById("box");
      box.addEventListener("mouseover", function() {
-      box.style.backgroundColor = "lightblue";
+      box.style.backgroundColor = "red";
     });
 
      box.addEventListener("mouseout", function() {
-      box.style.backgroundColor = "lightgray";
+      box.style.backgroundColor = "green";
     });
 
 // from valadition 
