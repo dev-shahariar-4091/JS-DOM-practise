@@ -13,3 +13,21 @@ clicked.addEventListener("click" , function(){
     body.style.backgroundColor = "lightblue"
 
 }) 
+
+// Count Button Clicks 
+
+const counter = document.getElementById("count");
+const btnIncrease = document.getElementById("btn-increse");
+let count = 0;
+btnIncrease.addEventListener("click", function(){
+   count++;
+   counter.value = count;
+   
+});
+
+// Live Input Preview
+const liveInput = document.getElementById("live-input");
+const livePra = document.getElementById("live-pra");
+liveInput.addEventListener('input', function(){
+ livePra.textContent = liveInput.value
+})
